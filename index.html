@@ -270,8 +270,6 @@
       <!-- end section-header -->
 
       <div class="row services-list block-1-2 block-tab-full">
-
-
         <div class="col-block service-item services_container_hover">
           <div class="services_container_hover">
             <a href="brand-solution.html">
@@ -1045,19 +1043,14 @@
         <div class="contact-primary">
           <h3 class="h6">Send Us A Message</h3>
 
-          <form
-            name="contactForm"
-            id="contactForm"
-            method="post"
-            action=""
-            novalidate="novalidate"
-          >
+         <form onsubmit="SendMail(event)">
+
             <fieldset>
               <div class="form-field">
                 <input
-                  name="contactName"
+                  name="fullName"
                   type="text"
-                  id="contactName"
+                  id="fullName"
                   placeholder="Your Name"
                   value=""
                   minlength="2"
@@ -1068,9 +1061,9 @@
               </div>
               <div class="form-field">
                 <input
-                  name="contactEmail"
+                  name="email_id"
                   type="email"
-                  id="contactEmail"
+                  id="email_id"
                   placeholder="Your Email"
                   value=""
                   required=""
@@ -1079,19 +1072,9 @@
                 />
               </div>
               <div class="form-field">
-                <input
-                  name="contactSubject"
-                  type="text"
-                  id="contactSubject"
-                  placeholder="Subject"
-                  value=""
-                  class="full-width"
-                />
-              </div>
-              <div class="form-field">
                 <textarea
-                  name="contactMessage"
-                  id="contactMessage"
+                  name="message"
+                  id="message"
                   placeholder="Your Message"
                   rows="10"
                   cols="50"
@@ -1114,15 +1097,14 @@
             </fieldset>
           </form>
 
-          <!-- contact-warning -->
-          <div class="message-warning">
-            Something went wrong. Please try again.
-          </div>
 
-          <!-- contact-success -->
-          <div class="message-success">
-            Your message was sent, thank you!<br />
-          </div>
+          <!-- <div>
+            <input name="contactName" type="text" class="full-width" id="fullName" />
+            <input name="email" type="email" id="email_id" class="full-width" />
+            <textarea placeholder="message" id="message"></textarea>
+            <button class="full-width btn--primary" onclick="SendMail()">Submit</button>
+          </div> -->
+    
         </div>
         <!-- end contact-primary -->
 
@@ -1328,5 +1310,17 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="sendmail.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("HmggpMquoxHDt-RHE");
+    </script>
+    <script>
+
+    </script>
   </body>
 </html>
