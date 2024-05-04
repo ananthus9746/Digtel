@@ -1,27 +1,3 @@
-// // function SendMail(){
-// //  console.log("sendmail..")
-
-// //     var params ={
-// //         from_name:document.getElementById("fullName").value,
-// //         email_id:document.getElementById("email_id").value,
-// //         message:document.getElementById("message").value
-// //     }
-// //     // emailjs.send("service_s274eya", "template_mqv1gi7", params).then(function (res){
-// //     //     alert("success"+res.status)
-// //     // })
-// //     const serviceID = 'default_service';
-// //     const templateID = 'template_mqv1gi7';
-
-// //     emailjs.send(serviceID, templateID, params)
-// //         .then(() => {
-// //             // btn.value = 'Send Email';
-// //             alert('Sent!');
-// //         }, (err) => {
-// //             // btn.value = 'Send Email';
-// //             alert(JSON.stringify(err));
-// //         });
-// // }
-
 function SendMail(event) {
     event.preventDefault();
     console.log("sendmail..");
@@ -37,8 +13,8 @@ function SendMail(event) {
         message: document.getElementById("message").value
     };
 
-    const serviceID = 'default_service';
-    const templateID = 'template_mqv1gi7';
+    const serviceID = 'service_0uckqcc';
+    const templateID = 'template_txbdbyd';
 
     emailjs.send(serviceID, templateID, params)
         .then(() => {
@@ -77,8 +53,8 @@ function Subscribe(event) {
         email: email
     };
 
-    const serviceID = 'default_service';
-    const templateID = 'template_t8n8x4f';
+    const serviceID = 'service_0uckqcc';
+    const templateID = 'template_m8hhk32';
 
     emailjs.send(serviceID, templateID, params)
         .then(() => {
